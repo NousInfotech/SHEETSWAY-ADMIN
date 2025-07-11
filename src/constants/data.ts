@@ -24,7 +24,7 @@ export const navItems: NavItem[] = [
   {
     title: 'Auditor Vetting & Management',
     url: '/dashboard/vetting',
-    icon: 'proposals', 
+    icon: 'userCheck', 
     isActive: false,
     shortcut: ['v', 'v'],
     items: []
@@ -48,7 +48,7 @@ export const navItems: NavItem[] = [
   {
     title: 'Disputes & Escalation Center',
     url: '/dashboard/diputes',
-    icon: 'payments', 
+    icon: 'gavel', 
     isActive: false,
     shortcut: ['d', 'd'],
     items: []
