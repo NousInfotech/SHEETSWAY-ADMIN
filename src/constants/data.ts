@@ -47,7 +47,7 @@ export const navItems: NavItem[] = [
   },
   {
     title: 'Disputes & Escalation Center',
-    url: '/dashboard/diputes',
+    url: '/dashboard/disputes',
     icon: 'gavel', 
     isActive: false,
     shortcut: ['d', 'd'],
