@@ -455,7 +455,7 @@ export default function SignInViewPage({ onToggleTheme }: SignInViewPageProps) {
             <div className='relative z-10'>
                 <Link href="/" className='flex items-center space-x-3'>
                 <Image
-                    src={'/assets/maltaxplorelogo.svg'}
+                    src={'/assets/sheetswaylogo.svg'}
                     alt='Company Logo'
                     width={180}
                     height={40}

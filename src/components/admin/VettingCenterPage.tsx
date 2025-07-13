@@ -534,11 +534,7 @@ export default function VettingCenterPage() {
         </Dialog>
       </div>
       <p className='text-green-300'>
-<<<<<<< HEAD
-        please select an auditor for checking their details
-=======
         please select an auditor for checking their details and verify them
->>>>>>> origin/devbysiva
       </p>
 
       {renderTabs()}

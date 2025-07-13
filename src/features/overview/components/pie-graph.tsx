@@ -61,20 +61,12 @@ export function PieGraph() {
   return (
     <Card className='@container/card'>
       <CardHeader>
-<<<<<<< HEAD
-        <CardTitle>Total Proposals for Current Project</CardTitle>
-=======
         <CardTitle>New Client Requests</CardTitle>
->>>>>>> origin/devbysiva
         <CardDescription>
           <span className='hidden @[540px]/card:block'>
             Total visitors by browser for the last 6 months
           </span>
-<<<<<<< HEAD
-          <span className='@[540px]/card:hidden'>ready for contribution</span>
-=======
           <span className='@[540px]/card:hidden'>new requests added</span>
->>>>>>> origin/devbysiva
         </CardDescription>
       </CardHeader>
       <CardContent className='px-2 pt-4 sm:px-6 sm:pt-6'>
@@ -145,11 +137,7 @@ export function PieGraph() {
                           y={(viewBox.cy || 0) + 24}
                           className='fill-muted-foreground text-sm'
                         >
-<<<<<<< HEAD
-                          Total Visitors
-=======
                           New Requests
->>>>>>> origin/devbysiva
                         </tspan>
                       </text>
                     );

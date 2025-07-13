@@ -79,7 +79,7 @@ export default function AppSidebar() {
   return (
     <Sidebar collapsible='icon'>
       <SidebarHeader>
-        <StaticOrgDisplay app='MaltaXplore' name='Admin Portal' />
+        <StaticOrgDisplay app='Sheetsway' name='Admin Portal' />
       </SidebarHeader>
       <SidebarContent className='overflow-x-hidden'>
         <SidebarGroup>

@@ -19,15 +19,15 @@ const ComplianceMonitoringPage = () => {
         <h2 className="text-xl font-semibold mb-3">Expiry Tracker</h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {[
-            { label: "Licenses", value: "12 expiring soon", color: "warning" },
+            { label: "Licenses", value: "12 expiring soon", color: "secondary" },
             { label: "KYB", value: "5 expired", color: "destructive" },
-            { label: "VAT IDs", value: "8 valid", color: "success" },
+            { label: "VAT IDs", value: "8 valid", color: "default" },
           ].map((item, idx) => (
             <Card key={idx}>
               <CardContent className="py-5 space-y-2">
                 <h3 className="text-md font-medium">{item.label}</h3>
                 <div className="text-lg font-semibold">{item.value}</div>
-                <Badge variant={item.color as any}>{item.label} Status</Badge>
+                <Badge variant={item.color as "default" | "destructive" | "outline" | "secondary"}>{item.label} Status</Badge>
               </CardContent>
             </Card>
           ))}
@@ -51,7 +51,7 @@ const ComplianceMonitoringPage = () => {
             <CardContent className="py-5 space-y-2">
               <h4 className="font-medium">Expiring Soon</h4>
               <p>10 documents expiring in next 7 days</p>
-              <Badge variant="warning">Review Needed</Badge>
+              <Badge variant="secondary">Review Needed</Badge>
             </CardContent>
           </Card>
         </div>
@@ -102,9 +102,9 @@ const ComplianceMonitoringPage = () => {
                       <Badge
                         variant={
                           a.status === "Compliant"
-                            ? "success"
+                            ? "default"
                             : a.status === "Warning"
-                            ? "warning"
+                            ? "secondary"
                             : "destructive"
                         }
                       >
@@ -133,7 +133,7 @@ const ComplianceMonitoringPage = () => {
                   Re-verification triggered · Reminder sent
                 </p>
               </div>
-              <Badge variant="warning">Pending</Badge>
+              <Badge variant="secondary">Pending</Badge>
             </div>
 
             <Separator />
