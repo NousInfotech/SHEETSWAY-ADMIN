@@ -131,3 +131,10 @@ export const recentSalesData: SaleUser[] = [
     initials: 'SD'
   }
 ];
+
+
+
+
+
+
+export const BACKEND_URL = "http://localhost:5000";

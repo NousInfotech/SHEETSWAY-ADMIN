@@ -83,7 +83,7 @@ export default function DashboardPage() {
 
       <div className='grid gap-6 md:grid-cols-2 lg:grid-cols-3'>
         {/* === System & Compliance Alerts Column === */}
-        <div className='flex flex-col gap-6 lg:col-span-1'>
+        <div className='flex flex-col gap-6 lg:col-span-1 justify-around'>
           <Card>
             <CardHeader className='flex flex-row items-center justify-between pb-4'>
               <div className='flex items-center gap-2'>
@@ -94,7 +94,7 @@ export default function DashboardPage() {
                 <a href='/dashboard/alerts/system'>View All</a>
               </Button>
             </CardHeader>
-            <CardContent className='flex flex-col gap-4'>
+            <CardContent className='flex flex-col gap-5'>
               {systemAlerts.slice(0, 4).map(
                 (
                   alert // Use .slice(0, 4) to show only a few on the dashboard
@@ -137,7 +137,7 @@ export default function DashboardPage() {
                 <a href='/dashboard/alerts/compliance'>View All</a>
               </Button>
             </CardHeader>
-            <CardContent className='flex flex-col gap-3'>
+            <CardContent className='flex flex-col gap-6'>
               {complianceAlerts.slice(0, 4).map(
                 (
                   alert // Use .slice(0, 4) to show only a few
