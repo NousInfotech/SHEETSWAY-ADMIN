@@ -1,5 +1,9 @@
-import FinanceHubPage from '@/features/finance-hub/components/FinanceHubPage';
+import { PaymentsPage } from '@/features/finance-hub';
 
-export default function FinanceHub() {
-  return <FinanceHubPage />;
+export default function PaymentsDashboardPage() {
+  return (
+    <div className="h-screen flex flex-col">
+      <PaymentsPage />
+    </div>
+  );
 } 

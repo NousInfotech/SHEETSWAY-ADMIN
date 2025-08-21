@@ -28,6 +28,7 @@ import { MilestonePaymentStatus } from './MilestonePaymentStatus';
 import { PlatformRevenueTracker } from './PlatformRevenueTracker';
 import { FailedDisputedPanel } from './FailedDisputedPanel';
 import { FinanceStats } from './FinanceStats';
+import { PaymentsPage } from './PaymentsPage';
 import * as XLSX from 'xlsx';
 
 export default function FinanceHubPage() {
@@ -93,7 +94,7 @@ export default function FinanceHubPage() {
 
       {/* Main Content Tabs */}
       <Tabs defaultValue="escrow-ledger" className="space-y-6">
-        <TabsList className="grid w-full grid-cols-4">
+        <TabsList className="grid w-full grid-cols-5">
           <TabsTrigger value="escrow-ledger" className="flex items-center gap-2">
             <Shield className="h-4 w-4" />
             Escrow Ledger
@@ -101,6 +102,10 @@ export default function FinanceHubPage() {
           <TabsTrigger value="milestone-payments" className="flex items-center gap-2">
             <Calendar className="h-4 w-4" />
             Milestone Payments
+          </TabsTrigger>
+          <TabsTrigger value="payments" className="flex items-center gap-2">
+            <DollarSign className="h-4 w-4" />
+            Payments
           </TabsTrigger>
           <TabsTrigger value="revenue-tracker" className="flex items-center gap-2">
             <TrendingUp className="h-4 w-4" />
@@ -120,6 +125,11 @@ export default function FinanceHubPage() {
         {/* Milestone Payment Status Tab */}
         <TabsContent value="milestone-payments" className="space-y-6">
           <MilestonePaymentStatus />
+        </TabsContent>
+
+        {/* Payments Tab */}
+        <TabsContent value="payments" className="space-y-6">
+          <PaymentsPage />
         </TabsContent>
 
         {/* Platform Revenue Tracker Tab */}

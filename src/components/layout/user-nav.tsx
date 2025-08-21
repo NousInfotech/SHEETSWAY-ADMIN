@@ -40,6 +40,11 @@ export function UserNav() {
               <p className='text-muted-foreground text-xs leading-none'>
                 {user.email}
               </p>
+              {localStorage.getItem('adminRole') === 'ADMIN' && (
+                <p className='text-xs text-blue-600 font-medium'>
+                  Admin
+                </p>
+              )}
             </div>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />

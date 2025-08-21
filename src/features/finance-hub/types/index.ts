@@ -99,4 +99,74 @@ export interface TransactionFilter {
   };
   clientName?: string;
   freelancerName?: string;
+}
+
+// New Payment Types based on Backend Schema
+export interface Payment {
+  id: string;
+  stripePaymentId: string;
+  amount: number;
+  currency: string;
+  status: 'pending' | 'succeeded' | 'failed' | 'refunded';
+  paymentMethod?: string;
+  paymentMeta?: any;
+  createdAt: string;
+  updatedAt: string;
+  escrow?: EscrowStatus;
+}
+
+export interface EscrowStatus {
+  id: string;
+  engagementId: string;
+  paymentId: string;
+  isReleased: boolean;
+  releaseDate?: string;
+  underDispute: boolean;
+  createdAt: string;
+  engagement?: Engagement;
+  payment?: Payment;
+}
+
+export interface Engagement {
+  id: string;
+  title?: string;
+  description?: string;
+  status?: string;
+  userId?: string;
+  auditFirmId?: string;
+  clientName?: string;
+  auditorName?: string;
+}
+
+export interface PaymentWithEscrow extends Payment {
+  escrow: EscrowStatus & {
+    engagement: Engagement;
+  };
+}
+
+export interface PaymentFilter {
+  status?: string;
+  paymentMethod?: string;
+  dateRange?: {
+    start: string;
+    end: string;
+  };
+  amountRange?: {
+    min: number;
+    max: number;
+  };
+  engagementId?: string;
+  role?: 'USER' | 'AUDITFIRM';
+  roleId?: string;
+}
+
+export interface PaymentStats {
+  totalPayments: number;
+  totalAmount: number;
+  currency: string;
+  pendingPayments: number;
+  successfulPayments: number;
+  failedPayments: number;
+  refundedPayments: number;
+  averagePaymentValue: number;
 } 
